@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: lightskyblue;
+}
+
+.container {
+    text-align: center;
+    color: black;
+}
+
+.ground {
+    width: 100%;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.sun {
+    width: auto;
+    height: auto;
+    margin: 20px auto;
+    fill: orange;
+}
+
+.times {
+    margin-top: 20px;
+    font-size: 20px;
+}
