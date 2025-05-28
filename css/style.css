@@ -1,42 +1,1022 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+/* 1. Global resets and variables*/
+
+* { 
+  margin: 0; 
+  padding: 0;  
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  scroll-behavior: smooth;
+}
+    
+:root{
+  --background-color: #f0f0f0;
+  --Selected-scheme: #8A0E0E; 
+  --text-color: #222;
+  --color-one: url('../img/red/coloredOne.png');
+  --color-two: url('../img/red/coloredTwo.png');
+  --color-three: url('../img/red/coloredThree.png');
+  --color-four: url('../img/red/coloredFour.png');
+  --color-five: url('../img/red/coloredFive.png');
+  --color-six: url('../img/red/coloredSix.png');
+  --background-image-form: url('../img/sfeerbeeldVerticalOne.jpg');
+  --arrow-rotation: 180deg;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: lightskyblue;
+main {
+  position: relative;
+  z-index: -1;
 }
 
-.container {
-    text-align: center;
-    color: black;
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  position: relative;
+  z-index: -1;
 }
 
-.ground {
-    width: 100%;
-    height: 100px;
-    background-color: green;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  
+/* 2. Header and hero*/
+
+header {
+  padding: 10px 0;
+  height: 13vh;
+  text-align: right;
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  overflow-x: clip;
 }
 
-.sun {
-    width: auto;
-    height: auto;
-    margin: 20px auto;
-    fill: orange;
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 150%; 
+  height: 200%;
+  transform: translate(-20%, -35%);
+  background: var(--color-one);
+  background-size: 100% 100%;
+  z-index: 1;
 }
 
+.titelVerf {
+  width: 90vw;
+  transform: translateX(-5%);
+  position: relative;
+  z-index: 2;
+}
+
+.headerInfo {
+  position: relative;
+  font-size: 1.4rem;
+  padding: 0.2em 0.5em;
+  z-index: 2;
+}
+
+.headerInfo::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 150%;
+  transform: translate(0%, -5%);
+  background: url("../img/whiteOne.png") no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.heroSection {
+  position: relative;
+  height: 75vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.faceContainer {
+  position: absolute;
+  inset: 0;
+}
+
+.redFace {
+  position: absolute;
+  height: 160%;
+  width: 140%;
+  transform: translate(-57%, -22%);
+  object-fit: cover;
+}
+
+.blueFace {
+  position: absolute;
+  height: 140%;
+  transform: translate(-52%, -15%);
+  object-fit: cover;
+}
+
+.greenFace {
+  position: absolute;
+  height: 140%;
+  transform: translate(-45%, -15%);
+  object-fit: cover;
+}
+
+.heroSection h1 {
+  position: absolute;
+  top: 1rem; 
+  right: 1rem;
+  font-size: 2.5rem;
+  max-width: 40%;
+  text-align: right;
+}
+
+.colorWheelContainer {
+  position: absolute;
+  bottom: 1rem; 
+  right: 1rem;
+  z-index: 0;
+  transform: translate(10%, -5%);
+  max-height: 450px;
+}
+
+.colorWheel {
+  position: relative; 
+  width: 40vw;
+  z-index: 0;
+    max-height: 450px;
+}
+
+.cls-1 { fill: #714897; }
+.cls-2 { fill: #d64391; }
+.cls-3 { fill: #ff1414; }
+.cls-4 { fill: #6ebe96; }
+.cls-5 { fill: #e49610; }
+.cls-6 { fill: #e8d710; }
+.cls-7 { fill: #48a8df; }
+.cls-8 { fill: #69b42e; }
+.cls-9 { fill: #2d4c9b; }
+
+.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+  stroke: #1d1d1b;
+  stroke-miterlimit: 10;
+  stroke-width: 5px;
+  cursor: pointer;
+}
+
+.colorArrow {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  font-size: 2rem; 
+  transform: translate(-50%, -50%) rotate(var(--arrow-rotation, 180deg));
+  transition: transform 0.3s ease;
+}
+
+.colorArrow::before {
+  content: "";
+  position: absolute;
+  width: 160%;
+  height: 160%;
+  transform: translate(-20%, -20%);
+  background-image: url("../img/whiteNine.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+/* 3. Hero - programmatie section*/
+
+.rectangleBasicOne {
+  height: 12vh;
+  padding: 10px 0;
+  margin-top: 10px;
+  z-index: 1;
+  position: relative;
+  width: 100vw;
+  overflow-x: clip;
+}
+
+.rectangleBasicOne::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 180%;
+  transform: translate(-19%, -35%);
+  background-image: var(--color-two);
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.videoContainer {
+  width: 100vw;
+  height: calc(100vw / 1920 * 1080);
+}
+
+.rectangleBasicTwo {
+  height: 15vh;
+  position: relative;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  width: 100vw;
+  overflow-x: clip;
+}
+
+.rectangleBasicTwo::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 130%;
+  transform: translate(-19%);
+  background-image: var(--color-three);
+  background-size: 100% 100%;
+}
+
+.rectangleBasicTwo h3 {
+  transform: rotate(-0.5deg);
+}
+
+.rectangleBasicTwo h3::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 170%;
+  transform: translate(-5%, -30%);
+  background-image: url("../img/whiteTen.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+h3 {
+  font-weight: 800;
+  font-size: 1.4rem;
+  padding: 5px;
+}
+
+.arrow {
+  font-size: 1.4rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.arrow::before {
+  content: "";
+  position: absolute;
+  width: 160%;
+  height: 160%;
+  transform: translate(-20%, -30%);
+  background-image: url("../img/whiteNine.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.visieTekstContainer {
+  overflow-x: clip;
+  display: none;
+}
+
+.visieParagraaf {
+  position: relative;
+  padding: 2rem;
+  font-size: 1rem;
+  transform: rotate(0.5deg);
+}
+
+.visieParagraaf::before {
+  content: "";
+  position: absolute;
+  transform: translate(-25%, -15%);
+  width: 140%;
+  height: 120%;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+
+.visieOne::before {
+  background-image: url("../img/whiteThree.png");
+}
+
+.visieTwo::before {
+  background-image: url("../img/whiteFour.png");
+}
+
+.visieTwo {
+  transform: rotate(-1deg);
+}
+
+.visieThree::before {
+  background-image: url("../img/whiteSix.png");
+}
+
+.visieFour::before {
+  background-image: url("../img/whiteSeven.png");
+}
+
+.visieFour {
+  transform: rotate(-2deg);
+}
+
+.imageSlider {
+  overflow: hidden;
+  width: 100vw;
+  height: 30vh;
+  padding: 10px 0px;
+  position: relative;
+  z-index: -1;
+  background: var(--Selected-scheme);
+}
+
+.sliderTrack {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.sliderTrack img {
+  height: 30vh;
+  margin-right: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* 4. Programmatie */
+
+.rectangleBasicThree {
+  height: 12vh;
+  padding: 10px 0;
+  z-index: -1;
+  position: relative;
+  width: 100vw;
+  overflow-x: clip;
+}
+
+.rectangleBasicThree::before {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 150%;
+  transform: translate(-15%, -15%) rotate(180deg);
+  background-image: var(--color-three);
+  background-size: 100% 100%;
+}
+
+.rectangleBasicThree h2 {
+  padding-bottom: 10px;
+  width: 80vw;
+  left: 12%;
+}
+
+.rectangleBasicThree h2::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 140%;
+  transform: translate(-10%, -5%);
+  background-image: url("../img/whiteOne.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.programOptions {
+  gap: 1rem;
+}
+
+.optionOne {
+  position: relative;
+}
+
+.optionOne::before {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 160%;
+  transform: translate(-15%, -15%);
+  background-image: url("../img/whiteEleven.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.optionTwo {
+  position: relative;
+  z-index: 2;
+}
+
+.optionTwo::before {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 160%;
+  transform: translate(-15%, -15%);
+  background-image: url("../img/whiteTwelve.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  }
+
+.programOptions {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.option.selected {
+  position: relative;
+  font-weight: 800;
+}
+
+.option.selected::after {
+  content: "";
+  position: absolute;
+  transform: translate(-85%, 250%);
+  width: 140%;
+  height: 10px; 
+  background-image: url("../img/whiteTwelve.png"); 
+  background-size: 100% 100%;
+}
+  
+.program {
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.middag {
+  transform: rotate(0.5deg);
+  padding-top: 4rem;
+}
+
+.middag::before {
+  content: "";
+  position: absolute;
+  transform: translate(-7.5%, -35%);
+  width: 110%;
+  height: 100%;
+  background-image: url("../img/whiteTwo.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 750;
+  padding-top: 2rem;
+}
+  
 .times {
-    margin-top: 20px;
-    font-size: 20px;
+  margin-top: 2rem;
+}
+
+ul {
+  padding-left: 1.4rem;
+}
+
+.programWrapper {
+  position: relative;
+  width: 200vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+  left: 2%;
+}
+
+.namiddagSelected {
+  transform: translateX(-55%);
+}
+  
+.programBlock {
+  position: relative;
+  width: 80vw;
+}
+
+.programBlock::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 110%;
+  transform: translate(-9%, 10%);
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.blockOne::before {
+  background-image: url("../img/whiteThree.png");
+}
+.blockOne {
+  transform: rotate(1deg);
+}
+.blockTwo::before {
+  background-image: url("../img/whiteFour.png");
+}
+.blockTwo {
+  transform: rotate(-0.5deg);
+}
+.blockThree::before {
+  background-image: url("../img/whiteNine.png");
+}
+.blockFour::before {
+  background-image: url("../img/whiteSix.png");
+}
+.blockFour {
+  transform: rotate(1.5deg);
+}
+.blockFive::before {
+  background-image: url("../img/whiteSeven.png");
+  transform: translate(-13%, 13%);
+}
+.blockFive {
+  transform: rotate(-0.5deg);
+}
+.blockSix::before {
+  background-image: url("../img/whiteThree.png");
+}
+.blockSix {
+  transform: rotate(-1.5deg);
+}
+.blockSeven::before {
+  background-image: url("../img/whiteNine.png");
+}
+.blockSeven {
+  transform: rotate(0.5deg);
+}
+.blockEight::before {
+  background-image: url("../img/whiteFour.png");
+  transform: translate(-9%, 0);
+  z-index: -1;
+}
+.blockEight {
+  transform: rotate(-1deg);
+}
+.blockNine::before {
+  background-image: url("../img/whiteSix.png");
+  z-index: -2;
+}
+.blockNine {
+  transform: rotate(0.5deg);
+}
+.blockTen::before {
+  background-image: url("../img/whiteNine.png");
+}
+.blockTen {
+  transform: rotate(-0.5deg);
+}
+
+/* 5. Formulier */
+
+.rectangleBasicFour {
+  height: 10vh;
+  padding: 10px, 0;
+  z-index: -1;
+  position: relative;
+  width: 100vw;
+  overflow-x: clip;
+}
+
+.rectangleBasicFour::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  transform: translate(-15%, -20%) rotate(180deg);
+  background-image: var(--color-four);
+  background-size: 100% 100%;
+  z-index: 0;
+}
+
+.questionArrow {
+  position: relative;
+  margin-right: 2rem;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.questionArrow::before {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 120%;
+  transform: translate(-15%, -10%);
+  background-image: url("../img/whiteSeven.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.questionTextVragen {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.questionTextVragen::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 140%;
+  transform: translate(-10%, -10%);
+  background-image: url("../img/whiteEleven.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.contact {
+  display: flex;
+  position: relative;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  background-image: var(--background-image-form);
+  width: 100%;
+  height: 110%;
+  background-size: 100% 100%;
+  z-index: -3;
+}
+
+.contact form {
+  display: grid;
+  gap: 0.5rem;               
+  width: 100%;
+  padding: 1rem 1.4rem;  
+    transition: transform 0.5s ease;      
+}
+
+.contact form::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 120%;
+  transform: translate(-12%, -7%);
+  background-image: url("../img/whiteNine.png");
+  background-size: 100% 100%;
+  z-index: -2;
+}
+
+.rectangleVerticalOne {
+  width: 15vw;
+  padding: 10px;
+  position: relative;
+  overflow-x: clip;
+}
+
+.rectangleVerticalOne::before {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 120%;
+  transform: translate(7%, -7%);
+  background-image: var(--color-six);
+  background-size: 100% 100%;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.5rem;            
+  font-size: 1rem;          
+  border: 1px solid var(--Selected-scheme);
+  border-radius: 4px;
+}
+  
+button {
+  padding: 0.5rem 1rem;       
+  font-size: 1rem;
+  background-color: var(--Selected-scheme);
+  border-radius: 4px;
+  border: none;
+}
+
+.rectangleBasicFive {
+  height: 20vw;
+  padding: 10px 0;
+  position: relative;
+  width: 100vw;
+  overflow-x: clip;
+}
+
+.rectangleBasicFive::before {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 100%;
+  transform: translate(-10%, -15%) rotate(180deg);
+  background-image: var(--color-five);
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+/* 6. Footer */
+
+.rectangleVerticalTwo {
+  width: 10vh;
+  height: 40vh;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.rectangleVerticalTwo::before {
+  content: "";
+  position: absolute;
+  width: 222%;
+  height: 150%;
+  transform: translate(-2%, 5%);
+  background-image: var(--color-six);
+  background-size: 100% 100%;
+  z-index: 0;
+}
+
+.infoWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+
+.infoText {
+  position: relative;
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+.infoText::before {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 100%;
+  transform: translate(-15%, 0%);
+  background-image: url("../img/whiteFour.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.infoArrow {
+  position: relative;
+  font-size: 5rem;
+  font-weight: 900;
+  transition: transform 0.3s ease;
+}
+
+.infoArrow::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  transform: translate(0%, 12%);
+  background-image: url("../img/whiteNine.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+footer div div {
+  text-align: right;
+  transform: translateX(90%);
+}
+
+footer div div p {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-top: 1.4rem;
+  width: 55vw;
+}
+
+.footerTextOne::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 70%;
+  transform: translate(-40%, -20%);
+  background-image: url("../img/whiteFour.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.footerTextOne {
+  transform: rotate(0.5deg);
+  padding-top: 5rem;
+}
+
+.footerTextTwo::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 80%;
+  transform: translate(-65%, -10%);
+  background-image: url("../img/whiteSeven.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.footerTextTwo {
+  transform: rotate(-1deg);
+}
+
+.footerTextThree::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  transform: translate(-30%, -10%);
+  background-image: url("../img/whiteNine.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.footerTextFour {
+  font-size: 0.5rem;
+  text-align: center;
+  padding-top: 8rem;
+  transform: rotate(-1deg) translateX(5%);
+}
+
+.footerTextFour::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 40%;
+  transform: translate(-8%, -40%);
+  background-image: url("../img/whiteEleven.png");
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+/* 7. ANIMATIONS */
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.footerContent {
+    transition: transform 0.5s ease;
+}
+
+.slideOut {
+  transform: translateX(-100%);
+  z-index: -2;
+}
+
+
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* 8. MEDIA QUERIES */
+
+@media (min-width: 440px) {
+  .titelVerf {
+    width: 80vw;
+    right: 14%;
+  }
+
+  .headerInfo {
+    transform: translateY(-100%); 
+    position: relative; 
+    bottom: 12%;
+  }
+
+  h1 {
+    width: 80vw;
+  }
+
+  .rectangleBasicThree h2 {
+    width: 60vw;
+    left: 22%;
+  }
+
+  h3 {
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .arrow {
+    font-size: 2.5rem;
+  }
+
+  .questionArrow {
+    font-size: 2.5rem;
+  }
+
+  .option {
+    padding: 0 2rem;
+    font-size: 1.5rem;
+  }
+
+  .option::after {
+    padding-top: 0.3rem;
+    translate: 18%;
+  }
+
+  .optionOne::before {
+    width: 100%;
+  }
+
+  .optionTwo::before {
+    width: 100%;
+  }
+
+  li {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  input, select, textarea {
+    font-size: 1.25rem;
+  }
+
+  .programWrapper {
+    left: 4%;
+  }
+
+  .namiddagSelected {
+    left: 0;
+  }
+
+  .footerTextOne::before {
+    width: 100%;
+  }
+
+  .footerTextThree::before {
+    transform: translateX(-40%) translateY(-15%);
+  }
+}
+
+@media (min-width: 620px) {
+
+  h3 {
+    font-size: 2.5rem;
+    padding-left: 1rem;
+  }
+
+  
+  h3::before {
+    transform: translateY(10%);
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .option {
+    padding: 0 3rem;
+    font-size: 2rem;
+  }
+
+  .option::after {
+    padding-top: 0.5rem;
+  }
+
+  li {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  input, select, textarea {
+    font-size: 1.5rem;
+  }
+
+  .programWrapper {
+    left: 5%;
+  }
+
+  .footerTextOne::before {
+    width: 60%;
+  }
+}
+
+@media (min-width: 775px) {
 }

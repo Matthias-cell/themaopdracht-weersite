@@ -1,28 +1,291 @@
 <!DOCTYPE html>
-<html lang="nl-be">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>API test site</title>
-        <link rel="icon" type="image/x-icon" href="/img/favicon.png">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js" defer></script>
-    </head>
-    <body>
-        <main>
-            <div class="container">
-                    <!-- de svg aanmaken had ik opgezocht omdat dit al lang geleden is en ik hier niet echt iets van vond in de cursus -->
-                <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                    <circle cx="30" cy="30" r="30"/>
-                </svg>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dag Van Het KSO</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="./img/dagVanHetKsoVerf.png" alt="Dag van het kso" class="titelVerf">
+      </div>
+      <span class="headerInfo">12/02 10-16u -KMSKA</span>
+    </header>
 
-                <div class="times">
-                    <p>Zonsopgang: <span id="sunrise">--:--</span></p>
-                    <p>Zonsondergang: <span id="sunset">--:--</span></p>
-                </div>
-        
-                <div class="ground"></div>
-            </div>
-        </main>
-    </body>
+    <main>
+      <section class="heroSection">
+        <div class="faceContainer">
+          <img src="./img/eliPng.png" alt="Fotografisch portret" class="redFace">
+        </div>
+        <h1>Beleef kunst <br> in elke vorm <br> en kleur</h1>
+        <div class="colorWheelContainer">
+          <svg class="colorWheel" viewBox="0 0 502.48 999.7" xmlns="http://www.w3.org/2000/svg">
+            <path id="segmentPink" class="cls-2" d="M499.98,810.82l-.15,186.34s-87.4,2.42-170.1-29.99l63.85-175.44s46.46,19.6,106.39,19.09Z"/>
+            <path id="segmentPurple" class="cls-1" d="M393.6,792.12l-63.87,175.05s-82.96-27.62-149.58-86.36l120.01-143.02s36.95,34.31,93.45,54.33Z"/>
+            <path id="segmentBlue" class="cls-9" d="M300.04,738.16l-119.89,142.65s-68.51-54.32-111.02-132.31l161.68-93.35s22.99,44.88,69.23,83.01Z"/>
+            <path id="segmentTeal" class="cls-7" d="M230.58,655.45l-161.45,93.04s-45.8-74.48-59.07-162.3l183.86-32.42s6.26,50.03,36.66,101.68Z"/>
+            <path id="segmentGreenBlue" class="cls-4" d="M193.84,553.98l-183.53,32.21s-17.56-85.65,0-172.72l183.86,32.42s-11.23,49.15-.33,108.09Z"/>
+            <path id="segmentGreen" class="cls-8" d="M193.42,445.97L9.94,413.47s12.79-86.5,59.07-162.3l161.68,93.35s-27.37,42.35-37.27,101.46Z"/>
+            <path id="segmentYellow" class="cls-6" d="M230.37,344.51l-161.3-93.3s41.6-76.9,111.02-132.31l120.01,143.02s-40.2,30.43-69.73,82.59Z"/>
+            <path id="segmentOrange" class="cls-5" d="M299.82,261.87l-119.66-142.84s65.4-58.04,149.58-86.36l63.85,175.44s-48.19,14.85-93.77,53.76Z"/>
+            <path id="segmentRed" class="cls-3" d="M393.33,207.75l-63.59-175.15S411.04.43,499.83,2.61v186.7s-50.36-2.53-106.5,18.45Z"/>
+          </svg>
+          <span class="colorArrow">▼</span>
+        </div>
+      </section>
+
+      <div class="rectangleBasicOne"></div>
+      <div class="videoContainer"></div>
+
+      <div class="rectangleBasicTwo">
+        <h3>Visietekst: Kunst secundair onderwijs</h3>
+        <div class="arrow">&#9660;</div>
+      </div>
+
+      <div class="visieTekstContainer">
+        <div class="visieParagraaf visieOne">
+          <p>
+            In het KSO krijgt elke leerling de kans om zichzelf te leren kennen en zich te ontwikkelen tot een volwaardig mens.
+            De cognitieve bagage voedt de affectieve verwerking, twee zeer belangrijke polen voor het KSO.
+          </p>
+        </div>
+        <div class="visieParagraaf visieTwo">
+          <p>
+            Het intellect van de leerling geeft, geleid door het gevoel, vorm aan een scala aan ideeën. Ideeën die gebaseerd zijn
+            op de vele aspecten van een ruime leefwereld. De leerling krijgt zo een brede kijk op de maatschappij, omarmt de
+            diversiteit en de eigen leefwereld. Out off the box denken leert de leerling met kritische zin de leefomgeving en
+            zichzelf te bevragen. Daarbij is de wereld van de kunsten de inspiratiebron bij uitstek.
+          </p>
+        </div>
+        <div class="visieParagraaf visieThree">
+          <p>
+            Door middel van een diepgaand creatieproces, waarbij verbeelding essentieel is, zet de leerling concepten om in een
+            volwaardige uiting in één van de verschillende kunsten. Onderweg leert hij doorzetten en wordt de lat stap voor stap
+            naar een hoger niveau getild. Zo groeit zijn zelfkennis en ontwikkelt hij alle facetten van het mens zijn.
+          </p>
+        </div>
+        <div class="visieParagraaf visieFour">
+          <p>
+            De leerkracht begeleidt de leerling in deze groei en er ontstaat met elke leerling een andere dialoog. In die dialoog
+            deelt de leerkracht zijn visie van het analyseren van concepten, gedachten en gevoelens om die dan concreet te kunnen
+            vormgeven.
+          </p>
+        </div>
+      </div>
+
+      <div class="imageSlider">
+        <div class="sliderTrack">
+          <img src="./img/sfeerbeeldHorizontalOne.jpg" alt="Sfeerbeeld 1">
+          <img src="./img/sfeerbeeldHorizontalTwo.jpg" alt="Sfeerbeeld 2">
+          <img src="./img/sfeerbeeldHorizontalThree.jpg" alt="Sfeerbeeld 3">
+          <img src="./img/sfeerbeeldHorizontalFour.jpg" alt="Sfeerbeeld 4">
+
+          <img src="./img/sfeerbeeldHorizontalOne.jpg" alt="Sfeerbeeld 1">
+          <img src="./img/sfeerbeeldHorizontalTwo.jpg" alt="Sfeerbeeld 2">
+          <img src="./img/sfeerbeeldHorizontalThree.jpg" alt="Sfeerbeeld 3">
+          <img src="./img/sfeerbeeldHorizontalFour.jpg" alt="Sfeerbeeld 4">
+        </div>
+      </div>
+
+      <div class="rectangleBasicThree">
+        <h2>Programmatie</h2>
+        <div class="programOptions">
+          <span class="option optionOne selected">Voormiddag</span>
+          <span class="option optionTwo">Namiddag</span>
+        </div>
+      </div>
+				
+      <div class="programWrapper ">
+
+						<!-- VOORMIDDAG BLOCK -->
+				<div class="programBlockWrapper voormiddagBlock">
+							<h3 class="middag">Voormiddag: 10u00 - 12u30</h3>
+							<div class="programBlock blockOne">
+								<h4>Leeszaal & Ateliers</h4>
+								<ul><li>Backstage voor leerkrachten en leerlingen</li></ul>
+							</div>
+							<div class="programBlock blockTwo">
+								<h4>De Keyzerzaal</h4>
+								<ul>
+									<li>West Side Story – KSO-act (11u-12u, max. 8 min)</li>
+									<li>Balletschool – dansoptreden (max. 8 min)</li>
+								</ul>
+							</div>
+							<div class="programBlock blockThree">
+								<h4>Zaal “Licht”</h4>
+								<ul>
+									<li>Moulage op paspoppen + bezoekers kunnen experimenteren op schaalpaspoppen (AVANT)</li>
+								</ul>
+							</div>
+							<div class="programBlock blockFour">
+								<h4>Rubenszaal</h4>
+								<ul>
+									<li>Tableau vivant – Sint Lucas & Kunsthumaniora (13 leerlingen)</li>
+									<li>Tableau vivant – Sint Jozef (6 leerlingen?)</li>
+									<li>Tableau vivant – 4WD Kunsthumaniora (15 leerlingen)</li>
+								</ul>
+							</div>
+							<div class="programBlock blockFive">
+								<h4>Zaal “Imago”</h4>
+								<ul><li>AVANT – Scharen en weefgetouw (5 klassen, 20 leerlingen)</li></ul>
+							</div>
+							<div class="programBlock blockSix">
+								<h4>Zaal “Helden” (OV)</h4>
+								<ul><li>Kunsthumaniora</li></ul>
+							</div>
+							<div class="programBlock blockSeven">
+								<h4>Kabinetten</h4>
+								<ul><li>Kunsthumaniora "Woord" (pauze 30 min)</li></ul>
+							</div>
+							<div class="programBlock blockEight">
+								<h4>VR-ruimte</h4>
+								<ul>
+									<li>Crossmedia Sint Jozef (alleen voormiddag)</li>
+									<li>Kunsthumaniora</li>
+								</ul>
+							</div>
+							<div class="programBlock blockNine">
+								<h4>Ateliers</h4>
+								<ul><li>Sint Jozef OV4 – Beeldreportage (21 leerlingen)</li></ul>
+							</div>
+							<div class="programBlock blockTen">
+								<h4>Rik Wouters</h4>
+								<ul>
+									<li>Modeltekenen – Sint Lucas & Kunsthumaniora (25 leerlingen)</li>
+									<li>Sint Jozef (6 leerlingen?)</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- NAMIDDAG BLOCK -->
+						<div class="programBlockWrapper namiddagBlock">
+							<h3 class="middag">Namiddag: 14u00 - 17u00</h3>
+							<div class="programBlock blockOne">
+								<h4>Leeszaal & Ateliers</h4>
+								<ul><li>Backstage voor leerkrachten en leerlingen</li></ul>
+							</div>
+							<div class="programBlock blockTwo">
+								<h4>De Keyzerzaal</h4>
+								<ul>
+									<li>Grime – KSO-act Sint Lucas (stilteperformance)</li>
+									<li>Muziek: West Side Story – KSO-act Kunsthumaniora (15u30–16u)</li>
+									<li>Balletschool – dansoptreden</li>
+								</ul>
+							</div>
+							<div class="programBlock blockThree">
+								<h4>Zaal “Licht”</h4>
+								<ul>
+									<li>Moulage op paspoppen + bezoekers kunnen experimenteren op schaalpaspoppen (AVANT)</li>
+								</ul>
+							</div>
+							<div class="programBlock blockFour">
+								<h4>Rubenszaal</h4>
+								<ul>
+									<li>Tableau vivant – Sint Lucas & Kunsthumaniora (13 leerlingen)</li>
+									<li>Tableau vivant – 4WD Kunsthumaniora (15 leerlingen)</li>
+								</ul>
+							</div>
+							<div class="programBlock blockFive">
+								<h4>Zaal “Imago”</h4>
+								<ul><li>AVANT – Scharen en weefgetouw (5 klassen, 20 leerlingen)</li></ul>
+							</div>
+							<div class="programBlock blockSix">
+								<h4>Zaal “Helden” (OV)</h4>
+								<ul><li>Kunsthumaniora</li></ul>
+							</div>
+							<div class="programBlock blockSeven">
+								<h4>Kabinetten</h4>
+								<ul><li>Kunsthumaniora "Woord" (pauze 30 min)</li></ul>
+							</div>
+							<div class="programBlock blockEight">
+								<h4>Zaal 2.6 – 2.14 – 2.16 ("Portretten") (OV)</h4>
+								<ul>
+									<li>Kunstkaai: 13 leerlingen + 5 leerlingen grime</li>
+									<li>15u00 – Horizon met landschappen: 6 monologen + 1 groepswerk (zaal 2.6)</li>
+									<li>15u30 – Salon: 6 monologen (zaal 2.14)</li>
+									<li>15u55 – Kwaad: groepswerk (zaal 2.16)</li>
+								</ul>
+							</div>
+							<div class="programBlock blockNine">
+								<h4>Groene zaal (2.22, 2.20, 2.19)</h4>
+								<ul>
+									<li>"Lijden", "Verlossing", "Gebed", "Hemel"</li>
+									<li>3de graad Architectuur – Kunsthumaniora (17 leerlingen)</li>
+								</ul>
+							</div>
+							<div class="programBlock blockTen">
+								<h4>Rik Wouters</h4>
+								<ul>
+									<li>Sint Lucas en Kunsthumaniora – Modeltekenen (25 leerlingen)</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+      <div class="rectangleBasicFour footerToggle">
+        <h2 class="questionText">
+          <span class="questionArrow">◄</span>
+          <span class="questionTextVragen">Vragen?</span>
+        </h2>
+      </div>
+
+      <section class="contact">
+        <form action="form.php" method="post">
+          <label for="naam">Naam*</label>
+          <input type="text" id="naam" name="naam" required>
+
+          <label for="email">E-mailadres*</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="telefoon">Telefoonnummer</label>
+          <input type="tel" id="telefoon" name="telefoon">
+
+          <label for="onderwerp">Onderwerp*</label>
+          <input type="text" id="onderwerp" name="onderwerp" required>
+
+          <label for="vraag">Uw vraag*</label>
+          <textarea id="vraag" name="vraag" required></textarea>
+
+          <button type="submit">Verzenden</button>
+        </form>
+        <div class="rectangleVerticalOne footerToggle"></div>
+      </section>
+
+      <div class="rectangleBasicFive footerToggle"></div>
+    </main>
+
+    <footer>
+      <div class="rectangleVerticalTwo footerToggle">
+        <div class="infoWrap">
+          <span class="infoText">INFO</span>
+          <span class="infoArrow">▼</span>
+        </div>
+
+        <div class="footerContent slideOut">
+          <p class="footerTextOne">
+            Dag van het KSO <br>
+            14 februari 2026 <br>
+            KMSKA, Antwerpen <br>
+            <a href="mailto:info@dagvanhetkso.be">info@dagvanhetkso.be</a>
+          </p>
+          <p class="footerTextTwo">
+            Volg ons: <br>
+            Instagram Facebook TikTok
+          </p>
+          <p class="footerTextThree">
+            In samenwerking met: <br>
+            Avant • Koninklijke Balletschool Antwerpen • Kunsthumaniora • Kunstkaai • Sint-Jozef • Sint-Lucas
+          </p>
+          <p class="footerTextFour">
+            © 2026 Dag van het KSO – Alle rechten voorbehouden
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
