@@ -50,10 +50,9 @@ header {
 header::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 150%; 
-  height: 200%;
-  transform: translate(-20%, -35%);
+  top: -25%; left: -23%;
+  width: 140%; 
+  height: 140%;
   background: var(--color-one);
   background-size: 100% 100%;
   z-index: 1;
@@ -61,26 +60,28 @@ header::before {
 
 .titelVerf {
   width: 90vw;
-  transform: translateX(-5%);
+  max-width: calc((366 / 65) * 10vh);
+  max-height: 10vh;
+  left: -8%;
   position: relative;
   z-index: 2;
 }
 
 .headerInfo {
   position: relative;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   padding: 0.2em 0.5em;
   z-index: 2;
+  top: -5%;
 }
 
 .headerInfo::before {
   content: "";
   position: absolute;
-  top: 0; 
+  top: -10%; 
   left: 0;
   width: 100%; 
   height: 150%;
-  transform: translate(0%, -5%);
   background: url("../img/whiteOne.png") no-repeat;
   background-size: 100% 100%;
   z-index: -1;
@@ -101,22 +102,27 @@ header::before {
 .redFace {
   position: absolute;
   height: 160%;
-  width: 140%;
-  transform: translate(-57%, -22%);
+  width: 140vw;
+  top: -30%;
+  left: -80%;
   object-fit: cover;
 }
 
 .blueFace {
   position: absolute;
   height: 140%;
-  transform: translate(-52%, -15%);
+  width: 120vw;
+  top: -20%;
+  left: -63%;
   object-fit: cover;
 }
 
 .greenFace {
   position: absolute;
-  height: 140%;
-  transform: translate(-45%, -15%);
+  height: 160%;
+  width: 120vw;
+  top: -30%;
+  left: -60%;
   object-fit: cover;
 }
 
@@ -132,17 +138,18 @@ header::before {
 .colorWheelContainer {
   position: absolute;
   bottom: 1rem; 
-  right: 1rem;
+  right: 0;
   z-index: 0;
-  transform: translate(10%, -5%);
-  max-height: 450px;
+  max-height: 55vh;
+  display: flex;
+  align-items: flex-end;
 }
 
 .colorWheel {
   position: relative; 
   width: 40vw;
   z-index: 0;
-    max-height: 450px;
+  max-height: 55vh;
 }
 
 .cls-1 { fill: #714897; }
@@ -164,10 +171,10 @@ header::before {
 
 .colorArrow {
   position: absolute;
-  top: 50%;
-  left: 90%;
+  top: 45%;
+  right: 5%;
   font-size: 2rem; 
-  transform: translate(-50%, -50%) rotate(var(--arrow-rotation, 180deg));
+  transform: rotate(var(--arrow-rotation, 180deg));
   transition: transform 0.3s ease;
 }
 
@@ -176,7 +183,8 @@ header::before {
   position: absolute;
   width: 160%;
   height: 160%;
-  transform: translate(-20%, -20%);
+  top: -30%;
+  left: -30%;
   background-image: url("../img/whiteNine.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -199,7 +207,8 @@ header::before {
   position: absolute;
   width: 150%;
   height: 180%;
-  transform: translate(-19%, -35%);
+  top: -50%;
+  left: -30%;
   background-image: var(--color-two);
   background-size: 100% 100%;
   z-index: 2;
@@ -225,9 +234,9 @@ header::before {
 .rectangleBasicTwo::before {
   content: "";
   position: absolute;
-  width: 150%;
+  width: 130%;
   height: 130%;
-  transform: translate(-19%);
+  left: -20%;
   background-image: var(--color-three);
   background-size: 100% 100%;
 }
@@ -241,7 +250,8 @@ header::before {
   position: absolute;
   width: 100%;
   height: 170%;
-  transform: translate(-5%, -30%);
+  top: -40%;
+  left: -5%;
   background-image: url("../img/whiteTen.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -249,12 +259,12 @@ header::before {
 
 h3 {
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   padding: 5px;
 }
 
 .arrow {
-  font-size: 1.4rem;
+  font-size: 2rem;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -266,7 +276,8 @@ h3 {
   position: absolute;
   width: 160%;
   height: 160%;
-  transform: translate(-20%, -30%);
+  top: -40%;
+  left: -30%;
   background-image: url("../img/whiteNine.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -287,7 +298,8 @@ h3 {
 .visieParagraaf::before {
   content: "";
   position: absolute;
-  transform: translate(-25%, -15%);
+  top: -8%;
+  left: -30%;
   width: 140%;
   height: 120%;
   background-size: 100% 100%;
@@ -337,7 +349,7 @@ h3 {
 
 .sliderTrack img {
   height: 30vh;
-  margin-right: 1.4rem;
+  margin-right: 1.5rem;
   flex-shrink: 0;
 }
 
@@ -357,23 +369,27 @@ h3 {
   position: absolute;
   width: 130%;
   height: 150%;
-  transform: translate(-15%, -15%) rotate(180deg);
+  top: -15%;
+  left: -15%;
+  transform: rotate(180deg);
   background-image: var(--color-three);
   background-size: 100% 100%;
 }
 
 .rectangleBasicThree h2 {
   padding-bottom: 10px;
-  width: 80vw;
-  left: 12%;
+  width: fit-content;
+  left: 27%;
 }
 
 .rectangleBasicThree h2::before {
   content: "";
   position: absolute;
   width: 110%;
-  height: 140%;
-  transform: translate(-10%, -5%);
+  max-width: 380px;
+  height: 150%;
+  top: -7%;
+  left: -7%;
   background-image: url("../img/whiteOne.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -383,8 +399,13 @@ h3 {
   gap: 1rem;
 }
 
+.option {
+  font-size: 1.5rem;
+}
+
 .optionOne {
   position: relative;
+  left: 5%;
 }
 
 .optionOne::before {
@@ -392,7 +413,8 @@ h3 {
   position: absolute;
   width: 130%;
   height: 160%;
-  transform: translate(-15%, -15%);
+  top: -20%;
+  left: -18%;
   background-image: url("../img/whiteEleven.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -401,14 +423,16 @@ h3 {
 .optionTwo {
   position: relative;
   z-index: 2;
+  right: 5%;
 }
 
 .optionTwo::before {
   content: "";
   position: absolute;
   width: 130%;
-  height: 160%;
-  transform: translate(-15%, -15%);
+  height: 160%;  
+  top: -20%;
+  left: -20%;
   background-image: url("../img/whiteTwelve.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -440,7 +464,8 @@ h2 {
 .option.selected::after {
   content: "";
   position: absolute;
-  transform: translate(-85%, 250%);
+  top: 150%;
+  left: -20%;
   width: 140%;
   height: 10px; 
   background-image: url("../img/whiteTwelve.png"); 
@@ -460,7 +485,8 @@ h2 {
 .middag::before {
   content: "";
   position: absolute;
-  transform: translate(-7.5%, -35%);
+  top: 30%;
+  left: -5%;
   width: 110%;
   height: 100%;
   background-image: url("../img/whiteTwo.png");
@@ -469,7 +495,7 @@ h2 {
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 750;
   padding-top: 2rem;
 }
@@ -479,7 +505,7 @@ h4 {
 }
 
 ul {
-  padding-left: 1.4rem;
+  padding-left: 1.5rem;
 }
 
 .programWrapper {
@@ -493,12 +519,13 @@ ul {
 }
 
 .namiddagSelected {
-  transform: translateX(-55%);
+  left: -115%;
 }
   
 .programBlock {
   position: relative;
   width: 80vw;
+  max-width: 550px;
 }
 
 .programBlock::before {
@@ -506,7 +533,8 @@ ul {
   position: absolute;
   width: 120%;
   height: 110%;
-  transform: translate(-9%, 10%);
+  top: 5%;
+  left: -10%;
   background-size: 100% 100%;
   z-index: -1;
 }
@@ -528,13 +556,15 @@ ul {
 }
 .blockFour::before {
   background-image: url("../img/whiteSix.png");
+  left: -14%;
 }
 .blockFour {
   transform: rotate(1.5deg);
 }
 .blockFive::before {
   background-image: url("../img/whiteSeven.png");
-  transform: translate(-13%, 13%);
+    top: 15%;
+  left: -15%;
 }
 .blockFive {
   transform: rotate(-0.5deg);
@@ -553,15 +583,14 @@ ul {
 }
 .blockEight::before {
   background-image: url("../img/whiteFour.png");
-  transform: translate(-9%, 0);
-  z-index: -1;
 }
 .blockEight {
   transform: rotate(-1deg);
 }
 .blockNine::before {
   background-image: url("../img/whiteSix.png");
-  z-index: -2;
+  top: 15%;
+  left: -15%;
 }
 .blockNine {
   transform: rotate(0.5deg);
@@ -589,7 +618,9 @@ ul {
   position: absolute;
   width: 150%;
   height: 150%;
-  transform: translate(-15%, -20%) rotate(180deg);
+  top: -40%;
+  left: -20%;
+  transform: rotate(180deg);
   background-image: var(--color-four);
   background-size: 100% 100%;
   z-index: 0;
@@ -601,6 +632,7 @@ ul {
   display: inline-block;
   cursor: pointer;
   transition: transform 0.3s ease;
+  font-size: 2rem;
 }
 
 .questionArrow::before {
@@ -608,7 +640,8 @@ ul {
   position: absolute;
   width: 140%;
   height: 120%;
-  transform: translate(-15%, -10%);
+  top: -10%;
+  left: -15%;
   background-image: url("../img/whiteSeven.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -628,7 +661,8 @@ ul {
   position: absolute;
   width: 120%;
   height: 140%;
-  transform: translate(-10%, -10%);
+  top: -12%;
+  left: -12%;
   background-image: url("../img/whiteEleven.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -653,7 +687,7 @@ ul {
   display: grid;
   gap: 0.5rem;               
   width: 100%;
-  padding: 1rem 1.4rem;  
+  padding: 1rem 1.5rem;  
     transition: transform 0.5s ease;      
 }
 
@@ -662,7 +696,8 @@ ul {
   position: absolute;
   width: 110%;
   height: 120%;
-  transform: translate(-12%, -7%);
+  top: -7%;
+  left: -15%;
   background-image: url("../img/whiteNine.png");
   background-size: 100% 100%;
   z-index: -2;
@@ -680,7 +715,8 @@ ul {
   position: absolute;
   width: 140%;
   height: 120%;
-  transform: translate(7%, -7%);
+  top: -7%;
+  left: 10%;
   background-image: var(--color-six);
   background-size: 100% 100%;
 }
@@ -714,7 +750,9 @@ button {
   position: absolute;
   width: 140%;
   height: 100%;
-  transform: translate(-10%, -15%) rotate(180deg);
+  top: -5%;
+  left: -10%;
+  transform: rotate(180deg);
   background-image: var(--color-five);
   background-size: 100% 100%;
   z-index: -1;
@@ -737,7 +775,8 @@ button {
   position: absolute;
   width: 222%;
   height: 150%;
-  transform: translate(-2%, 5%);
+  top: -20%;
+  left: -65%;
   background-image: var(--color-six);
   background-size: 100% 100%;
   z-index: 0;
@@ -748,9 +787,7 @@ button {
   align-items: center;
   gap: 2rem;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 
@@ -765,7 +802,7 @@ button {
   position: absolute;
   width: 130%;
   height: 100%;
-  transform: translate(-15%, 0%);
+  left: -15%;
   background-image: url("../img/whiteFour.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -783,7 +820,7 @@ button {
   position: absolute;
   width: 100%;
   height: 80%;
-  transform: translate(0%, 12%);
+  top: 12%;
   background-image: url("../img/whiteNine.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -796,10 +833,11 @@ footer div div {
 
 footer div div p {
   position: relative;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
-  padding-top: 1.4rem;
+  padding-top: 1.5rem;
   width: 55vw;
+  max-width: 300px;
 }
 
 .footerTextOne::before {
@@ -807,7 +845,8 @@ footer div div p {
   position: absolute;
   width: 110%;
   height: 70%;
-  transform: translate(-40%, -20%);
+  top: 40%;
+  left: 5%;
   background-image: url("../img/whiteFour.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -821,10 +860,11 @@ footer div div p {
 .footerTextTwo::before {
   content: "";
   position: absolute;
-  width: 120%;
-  height: 80%;
-  transform: translate(-65%, -10%);
-  background-image: url("../img/whiteSeven.png");
+  width: 110%;
+  height: 120%;
+  top: 17%;
+  left: 0;
+  background-image: url("../img/whiteTwelve.png");
   background-size: 100% 100%;
   z-index: -1;
 }
@@ -838,7 +878,8 @@ footer div div p {
   position: absolute;
   width: 120%;
   height: 100%;
-  transform: translate(-30%, -10%);
+  top: 10%;
+  left: -8%;
   background-image: url("../img/whiteNine.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -848,7 +889,7 @@ footer div div p {
   font-size: 0.5rem;
   text-align: center;
   padding-top: 8rem;
-  transform: rotate(-1deg) translateX(5%);
+  transform: rotate(-1deg) ;
 }
 
 .footerTextFour::before {
@@ -856,7 +897,8 @@ footer div div p {
   position: absolute;
   width: 110%;
   height: 40%;
-  transform: translate(-8%, -40%);
+  top: 75%;
+  left: -5%;
   background-image: url("../img/whiteEleven.png");
   background-size: 100% 100%;
   z-index: -1;
@@ -887,136 +929,152 @@ footer div div p {
 
 /* 8. MEDIA QUERIES */
 
-@media (min-width: 440px) {
-  .titelVerf {
-    width: 80vw;
-    right: 14%;
+@media (min-width: 480px) {
+  .headerInfo, h3, h4, .option {
+    font-size: 1.75rem;
   }
+
+  .programBlock::before {
+    height: 140%;
+  }
+
+  .blockOne::before {
+    background-image: url(../img/whiteEleven.png);
+    top: 0;
+  }
+
+  .blockTwo::before {
+    background-image: url(../img/whiteTen.png);
+    top: -10%;
+  }
+
+  .blockThree::before {
+    background-image: url(../img/whiteFive.png);
+    height: 175%;
+    top: -30%;
+    left: -12%;
+  }
+
+  .blockFour::before {
+    background-image: url(../img/whiteNine.png);
+    height: 110%;
+    top: 15%;
+    left: -12%;
+  }
+
+  .blockFive::before {
+    background-image: url(../img/whiteTwelve.png);
+    top: -3%;
+    width: 110%;
+    left: -10%;
+  }
+
+  .blockSix::before {
+    background-image: url(../img/whiteOne.png);
+    width: 70%;
+    left: -5%;
+  }
+
+  .blockSeven::before {
+    background-image: url(../img/whiteEleven.png);
+    width: 100%;
+    left: -10%;
+  }
+
+  .blockEight::before {
+    background-image: url(../img/whiteTwelve.png);
+    top: -2%;
+  }
+
+  .blockNine::before {
+    background-image: url(../img/whiteTen.png);
+    width: 110%;
+    top: -4%;
+    left: -7%;
+  }
+
+  .blockTen::before {
+    background-image: url(../img/whiteOne.png);
+    height: 160%;
+    width: 110%;
+    top: -7%;
+    left: -7%;
+  }
+}  
+
+@media (min-width: 549px) {
 
   .headerInfo {
-    transform: translateY(-100%); 
-    position: relative; 
-    bottom: 12%;
+    top: -20%;
   }
 
-  h1 {
-    width: 80vw;
+  .footerTextFour {
+    font-size: 0.75rem;
   }
 
-  .rectangleBasicThree h2 {
-    width: 60vw;
-    left: 22%;
-  }
+  .Visieparagraaf p,  li, input, select, textarea, button, footer div div p {
+    font-size: 1.25rem;
+  }  
 
-  h3 {
+  .headerInfo, h3, h4, .option {
     font-size: 2rem;
-    padding-left: 1rem;
   }
 
-  h2 {
-    font-size: 2rem;
+  .questionArrow, .arrow, .colorArrow {
+    font-size: 2.5rem;
+  }
+
+  .heroSection, h1, h2, .questionTextVragen {
+    font-size: 3rem;
+  }
+
+  .visieOne::before {
+    background-image: url(../img/whiteEleven.png);
+    height: 200%;
+    top: -35%;
+  }
+
+  .visieTwo::before {
+    background-image: url(../img/whiteTwelve.png);
+    height: 165%;
+    top: -32%;
+  }
+
+  .visieThree::before {
+    background-image: url(../img/whiteTwo.png);
+    height: 160%;
+    top: -22%;
+  }
+
+  .visieFour::before {
+    background-image: url(../img/whiteTwelve.png);
+    height: 170%;
+    top: -17%;
+  }
+
+  .visieFour {
+    padding-bottom: 0;
   }
 
   .arrow {
-    font-size: 2.5rem;
+    right: 5%;
   }
 
-  .questionArrow {
-    font-size: 2.5rem;
+  .rectangleBasicTwo h3 {
+    padding-left: 2rem;
   }
 
-  .option {
-    padding: 0 2rem;
-    font-size: 1.5rem;
+  .rectangleBasicThree::before {
+    height: 160%;
+  }
+} 
+
+@media (min-width: 650px) {
+  .rectangleBasicTwo h3::before {
+    width: 110%;
   }
 
-  .option::after {
-    padding-top: 0.3rem;
-    translate: 18%;
+  .headerInfo {
+    top: -30%;
   }
-
-  .optionOne::before {
-    width: 100%;
-  }
-
-  .optionTwo::before {
-    width: 100%;
-  }
-
-  li {
-    font-size: 1.25rem;
-  }
-
-  h4 {
-    font-size: 1.5rem;
-  }
-
-  input, select, textarea {
-    font-size: 1.25rem;
-  }
-
-  .programWrapper {
-    left: 4%;
-  }
-
-  .namiddagSelected {
-    left: 0;
-  }
-
-  .footerTextOne::before {
-    width: 100%;
-  }
-
-  .footerTextThree::before {
-    transform: translateX(-40%) translateY(-15%);
-  }
-}
-
-@media (min-width: 620px) {
-
-  h3 {
-    font-size: 2.5rem;
-    padding-left: 1rem;
-  }
-
-  
-  h3::before {
-    transform: translateY(10%);
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  .option {
-    padding: 0 3rem;
-    font-size: 2rem;
-  }
-
-  .option::after {
-    padding-top: 0.5rem;
-  }
-
-  li {
-    font-size: 1.5rem;
-  }
-
-  h4 {
-    font-size: 2rem;
-  }
-
-  input, select, textarea {
-    font-size: 1.5rem;
-  }
-
-  .programWrapper {
-    left: 5%;
-  }
-
-  .footerTextOne::before {
-    width: 60%;
-  }
-}
-
-@media (min-width: 775px) {
-}
+} 
